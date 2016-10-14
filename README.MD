@@ -16,7 +16,7 @@ rnpm link
 
 ## 展示
 
-<img src="todo.jpeg" alt="图片展示" width=200 height=500>
+<img src="todo.jpeg" alt="图片展示" width=200 height=400>
 
 
 
