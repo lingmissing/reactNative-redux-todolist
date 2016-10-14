@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import Layout from '../Layout'
 
 const styles = StyleSheet.create({
   button: {
@@ -22,18 +23,17 @@ export default class Counter extends Component {
     const { counter, increment, decrement } = this.props;
 
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>{counter}</Text>
-        <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>+1</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>-1</Text>
-        </TouchableOpacity>
-         <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>跳转TodoList</Text>
-        </TouchableOpacity>
-      </View>
+      <Layout navigator={this.props.navigator}>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>{counter}</Text>
+          <TouchableOpacity onPress={increment} style={styles.button}>
+            <Text>+1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={decrement} style={styles.button}>
+            <Text>-1</Text>
+          </TouchableOpacity>
+        </View>
+      </Layout>
     );
   }
 }

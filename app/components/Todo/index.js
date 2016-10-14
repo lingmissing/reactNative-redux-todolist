@@ -19,7 +19,7 @@ class Todo extends Component {
   }
   render() {
     return (
-      <Layout>
+      <Layout navigator={this.props.navigator}>
         <View style={{flex:1}}>
           <TodoHeader
             addTodo={this.props.addTodo}
