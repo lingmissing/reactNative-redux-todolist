@@ -18,16 +18,10 @@ class CounterApp extends Component {
   render() {
     const { state, actions } = this.props;
     return (
-      <Navigator
-        initialRoute={{ title: 'Counter', index: 0 }}
-        renderScene={(route, navigator) =>
-          <Counter
-            counter={state.count}
-            {...actions}
-            navigator={navigator}
-           />
-        }
-      />
+      <Counter
+        counter={state.count}
+        {...actions}
+        />
     );
   }
 }

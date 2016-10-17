@@ -23,7 +23,7 @@ export default class Counter extends Component {
     const { counter, increment, decrement } = this.props;
 
     return (
-      <Layout navigator={this.props.navigator}>
+      <Layout>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>{counter}</Text>
           <TouchableOpacity onPress={increment} style={styles.button}>
