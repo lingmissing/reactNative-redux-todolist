@@ -53,13 +53,13 @@ class Layout extends Component {
         </Icon.TabBarItem>
 
         <Icon.TabBarItem
-          title="Navicon"
-          iconName="ios-person-outline"
-          selectedIconName="ios-person"
-          selected={this.state.selectedTab === 'navicon'}
+          title="List"
+          iconName="ios-list-box-outline"
+          selectedIconName="ios-list-box"
+          selected={this.state.selectedTab === 'List'}
           onPress={() => {
             this.setState({
-              selectedTab: 'navicon',
+              selectedTab: 'List',
             });
         }}>
           <NavigatorIOS
