@@ -2,24 +2,19 @@
 
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
-import { Navigator } from 'react-native'
 import Counter from '../components/Counter';
 import * as counterActions from '../actions/counterAction';
 import { connect } from 'react-redux';
 
-// @connect(state => ({
-//   state: state.counter
-// }))
-class CounterApp extends Component {
-  constructor(props) {
-    super(props);
-  }
 
+class CounterApp extends Component {
   render() {
-    const { state, actions } = this.props;
+    const { state, actions, navigator } = this.props;
+    console.log(this.props);
     return (
       <Counter
         counter={state.count}
+        navigator={navigator}
         {...actions}
         />
     );

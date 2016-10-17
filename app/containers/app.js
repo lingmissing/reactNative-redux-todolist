@@ -7,6 +7,7 @@ import createLogger from 'redux-logger';
 import * as reducers from '../reducers';
 import CounterApp from './counterApp';
 import TodoApp from './todoApp'
+import Layout from './layout'
 
 const logger = createLogger()
 const createStoreWithMiddleware = applyMiddleware(thunk,logger)(createStore);
@@ -17,7 +18,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <TodoApp />
+        <Layout />
       </Provider>
     );
   }
