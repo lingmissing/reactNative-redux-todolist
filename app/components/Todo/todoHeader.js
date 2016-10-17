@@ -5,6 +5,7 @@ import TodoInput from './todoInput'
 
 const styles = StyleSheet.create({
   headerBox: {
+    marginTop: 60,
     paddingVertical:25,
     paddingHorizontal: 20,
     // flex: 1,

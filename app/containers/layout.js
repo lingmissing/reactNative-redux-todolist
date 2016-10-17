@@ -3,6 +3,7 @@ import { View,StyleSheet,Text,TabBarIOS,NavigatorIOS } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Counter from './counterApp'
 import Todo from './todoApp'
+import List from './listApp'
 
 
 const styles = StyleSheet.create({
@@ -41,12 +42,12 @@ class Layout extends Component {
             barTintColor='#5dc2af'
             titleTextColor='#fff'
             // 是否隐藏导航条
-            navigationBarHidden={true}
+            // navigationBarHidden={true}
             style={styles.navigator}
             initialRoute={{
-              component: Todo,
+              component: List,
               passProps: {},
-              title: 'TodoList'
+              title: 'List'
             }}
             />
         </Icon.TabBarItem>
@@ -64,11 +65,12 @@ class Layout extends Component {
           <NavigatorIOS
             barTintColor='#5dc2af'
             titleTextColor='#fff'
+            // navigationBarHidden={true}
             style={styles.navigator}
             initialRoute={{
-              component: Todo,
+              component: List,
               passProps: {},
-              title: 'TodoList',
+              title: 'List',
             }}
             />
         </Icon.TabBarItem>
