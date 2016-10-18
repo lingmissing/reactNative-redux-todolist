@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
-import Todo from '../../containers/todoApp'
 
 const styles = StyleSheet.create({
   button: {
@@ -21,16 +20,6 @@ export default class Counter extends Component {
   back() {
      this.props.navigator.pop()
   }
-  go() {
-     this.props.navigator.push({
-      component: Todo,
-      title: 'todoList',
-      tintColor: '#fff',
-      initialRoute: {
-        backButtonTitle: 'back'
-      }
-    })
-  }
 
   render() {
     const { counter, increment, decrement } = this.props;
@@ -47,9 +36,6 @@ export default class Counter extends Component {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.back()} style={styles.button}>
             <Text>back</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.go()} style={styles.button}>
-            <Text>todo</Text>
           </TouchableOpacity>
         </View>
     
